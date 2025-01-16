@@ -1,6 +1,5 @@
 import selenium.webdriver as webdriver
 from selenium.webdriver.chrome.service import Service
-import time
 from bs4 import BeautifulSoup
 
 
@@ -15,7 +14,7 @@ def scrape_website(website):
         driver.get(website)
         print("Page  loaded...")
         html=driver.page_source
-        time.sleep(10)
+        
         return html
     finally:
         driver.quit()
